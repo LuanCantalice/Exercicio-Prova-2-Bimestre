@@ -1,7 +1,19 @@
-numFator = eval(input(" Qual numero você quer fatorar? "))
-auxFator = 1
+vzs = int(input("Quantas vezes você quer calcular o fatorial? "))
+print("")
+num = int(input("Digite um número para o fatorial: "))
+fatorial = 1
 
-while(numFator > 1):
-    auxFator = numFator * auxFator
-    numFator = numFator - 1
-print(" O numero digitado fatorado é igual a:", auxFator)
+for i in range (vzs):
+    if (num < 16):
+        while(num > 1):
+            fatorial = fatorial*num
+            num -= 1
+            
+        print("O fatorial do número é:", fatorial)
+        
+    else:
+        print("Número não suportado!")
+        
+    fatorial = 1
+    if (i < (vzs - 1)):
+        num = int(input("Digite um número para o fatorial: "))
